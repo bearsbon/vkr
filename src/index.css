@@ -1,13 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+html,
 body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-align: initial;
+  background-color: #e0e0e0;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content {
+  @apply grid bg-white rounded-[10px] p-10 shadow-2xl h-[90vh] lg:grid-cols-[210px_auto] xl:grid-cols-[300px_auto];
+}
+
+.sidebar-link {
+  @apply transition duration-200 flex items-center gap-4 tracking-[1px] p-4 pl-10 font-medium text-base text-gray-100 bg-sky-800 active:bg-gray-100 hover:text-sky-800 hover:bg-gray-200;
+}
+
+.sidebar-link:hover svg {
+  fill: rgb(7 89 133);
+}
+
+.active {
+  background: #fff;
+  color: rgb(7 89 133);
+}
+
+.active svg {
+  fill: rgb(7 89 133);
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.resume__h3 {
+  @apply w-72 bg-sky-700 text-center my-7 h-10 text-[24px] font-medium leading-10 text-white;
+}
+
+.border__box {
+  @apply rounded-[5px] border-[1px] border-[#2F89FE] px-10 py-5 mb-3;
+}
+
+.education__wrapper {
+  @apply grid mx-[14px] my-5 gap-3 w-[80%];
+  grid-template-columns: 1fr 2fr;
+}
+
+.job__wrapper {
+  @apply grid mx-[14px] my-5 gap-3 text-[#777777];
+  grid-template-columns: 1fr 2fr;
+}
+
+.year {
+  grid-column: 2;
+}
+
+.page_h1 {
+  @apply text-[22px] font-semibold text-[#303439] mb-5;
+}
+
+.filter_name {
+  @apply my-5 text-lg font-medium text-[#303439];
+}
+
+.employee {
+  @apply lg:w-[85%] xl:w-[95%] 2xl:w-[100%] h-16 bg-[#FAFAFA] rounded-[50px] border-[1px] grid items-center my-2 xl:grid-cols-[80px_1fr_1fr_250px_1fr];
+  /* grid-template-columns: 80px 1fr 1fr 250px 1fr; */
+}
+
+.name {
+  @apply font-bold text-[#303439];
+}
+
+.employee_search {
+  @apply rounded-[10px] w-[75%] h-[38px] px-3 ml-3 mb-5;
+  box-shadow: 0 0 5px 1px #9499a0 inset;
+}
+
+.filter_search {
+  padding: 10px;
+  box-shadow: 0 0 3px 1px #9499a0 inset;
+}
+
+.mainBG {
+  background: radial-gradient(
+    117.14% 117.14% at 50% 22.75%,
+    #ffffff 0%,
+    #f8f8f8 44.69%,
+    #75acf3 100%
+  );
+}
+
+.employee_list_title {
+  @apply lg:w-[85%] xl:w-[95%] 2xl:w-[100%] grid items-center xl:grid-cols-[80px_1fr_1fr_250px_1fr] text-center text-[#49505B] font-semibold;
+}
+
+/* dropdown  */
+
+.dropdown_select {
+  @apply w-[80%] p-[7px] rounded-lg;
+  box-shadow: 0 0 5px 1px #9499a0 inset;
+}
+
+/* Модальное окно */
+
+.modal {
+  @apply h-screen w-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 flex items-center justify-center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  @apply p-[20px] rounded-xl bg-white;
+  margin-top: 10px;
+  width: 80vw;
+  /* transform: scale(0.5); */
+  transition: 0.3s;
+}
+
+.modal__content.active {
+  /* transform: scale(1); */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.our_team_slider {
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  @apply bg-white w-[220px] h-[225px] rounded-2xl;
+  margin-left: 20px;
+}
+
+/* Skillbar */
+.title-text {
+  text-align: center;
+  background-color: #2f89fe;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 50px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-box .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 95%;
+  border-radius: 6px;
+  background: #2f89fe;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-per.css {
+  width: 80%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.javascript {
+  width: 60%;
+  animation-delay: 0.2s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -16px;
+  top: -31px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  background: #2f89fe;
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: #2f89fe;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Skillbar end */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 15pt;
+}
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 15pt;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }

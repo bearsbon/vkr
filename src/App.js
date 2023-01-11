@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Sidebar from './components/Sidebar';
+import './index.css';
+import StartPage from './pages/StartPage';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ContentRoutes from './components/ContentRoutes';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {isAuth ? (
+        <div className="flex overflow-hidden">
+          <Sidebar />
+          <div className="container m-auto my-6 w-[75%] ">
+            <ContentRoutes />
+          </div>
+        </div>
+      ) : (
+        <Routes>
+          <Route path="/" element={<StartPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/auth/register" element={<Register />} />
+        </Routes>
+      )}
     </div>
   );
 }
-
-export default App;
