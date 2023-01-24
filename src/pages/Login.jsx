@@ -53,10 +53,10 @@ export default function Login() {
             Войти
           </button>
           <p className="text-center mt-5 font-medium">
-            Забыл пароль? <a className="text-[#2665C5]">Восстановить</a>
-          </p>
-          <p>
-            <Link to="/auth/register">Зарегистрироваться</Link>
+            Нет аккаунта?{' '}
+            <Link to="/auth/register" className="text-[#2665C5]">
+              Зарегистрироваться
+            </Link>
           </p>
         </form>
       </div>

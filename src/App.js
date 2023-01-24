@@ -6,9 +6,10 @@ import Register from './pages/Register';
 import ContentRoutes from './components/ContentRoutes';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
 
   return (
     <div>

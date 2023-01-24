@@ -1,9 +1,6 @@
 import React from 'react';
 import ava from './../images/mark-cukerberg.jpg';
 
-import SkillsBar from '../components/SkillsBar';
-import SkillsBar2 from '../components/SkillsBar2';
-
 export default function Resume() {
   const workExp = [
     { years: '2004-2007', location: 'Лукойл', position: 'Экономист' },
@@ -51,6 +48,7 @@ export default function Resume() {
 
   return (
     <div className="text-[#303439] ">
+      <h1 className="page_h1">Статистика</h1>
       <button className="bg-sky-700 text-white px-5 py-2 rounded-lg active:scale-[.98] block ml-auto">
         Редактировать
       </button>
@@ -123,21 +121,6 @@ export default function Resume() {
               <h4 className="">Образование</h4>
             </div>
             {ed}
-            {/* <div className="education__wrapper">
-              <div className="flex">
-                <div className="bg-[#2F89FE] w-[11px] h-[11px] rounded-full mt-[8px] mr-[18px]"></div>
-                <span className="year font-semibold text-lg text-[#2F89FE]">2004 - 2007 </span>
-              </div>
-              <div>
-                <div className=" font-semibold text-lg text-[#2F89FE] ml-20">
-                  Уральский Федеральный университет
-                </div>
-                <div className=" font-medium text-m ml-20">
-                  Бакалавриат по специальности маркетинг
-                </div>
-              </div>
-            </div>
-            */}
           </div>
 
           <div className="border__box">
@@ -152,19 +135,6 @@ export default function Resume() {
               <h4 className="">Опыт работы</h4>
             </div>
             {exp}
-
-            {/* <div className="job__wrapper">
-              <div className="flex">
-                <div className="bg-[#777777] w-[11px] h-[11px] rounded-full mt-[8px] mr-[18px]"></div>
-                <span className="year font-semibold text-lg ">2004 - 2007 </span>
-              </div>
-              <div>
-                <div className=" font-semibold text-lg  ml-20">
-                  Уральский Федеральный университет
-                </div>
-              </div>
-            </div>
-            */}
           </div>
 
           <div className="border__box">
@@ -177,7 +147,6 @@ export default function Resume() {
               </svg>
               <h4 className="">Уровень владения</h4>
             </div>
-            <SkillsBar2 />
           </div>
 
           <div className="border__box">

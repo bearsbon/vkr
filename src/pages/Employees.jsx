@@ -89,6 +89,7 @@ export default function Employees() {
     },
   ];
 
+  // фильтр поиска по ФИО
   const search = employees.filter((item) => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });

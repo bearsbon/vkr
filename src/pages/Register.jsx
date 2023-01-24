@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Register() {
   const [values, setValues] = useState({
@@ -8,17 +10,28 @@ export default function Register() {
     password: '',
   });
 
+  const generateError = (error) => {
+    toast.error(error, {
+      position: 'bottom-right',
+    });
+  };
+
   const handleSubmit = async (e) => {
     try {
       const data = await axios.post('http://localhost:5000/auth/register', {
         ...values,
       });
-      console.log(data);
-      if (data.errors) {
-      } else {
+      if (data) {
+        if (data.errors) {
+          const { email, password } = data.errors;
+          if (email) generateError(email);
+          else if (password) generateError(password);
+        } else {
+          //   navigate('/');
+        }
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -66,13 +79,14 @@ export default function Register() {
             Зарегистрироваться
           </button>
           <p className="text-center mt-5 font-medium">
-            Уже есть аккаунт?
+            Уже есть аккаунт?{' '}
             <Link to="/login" className="text-[#2665C5]">
               Войти
             </Link>
           </p>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }

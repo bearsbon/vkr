@@ -1,93 +1,95 @@
-import EmployeeModal from '../components/EmployeeModal';
+import EmployeeModal from './EmployeeModal';
 import { useState } from 'react';
+import SkillBar from './employeeInfo/skillbar/SkillsBar';
+import SkillBar3 from './employeeInfo/skillbar/SkillBar3';
 
 export default function EmployeeInList(props) {
-  let employees = [
-    {
-      id: 1,
-      name: 'Киркоров Филлип Бедросович',
-      age: 44,
-      gender: 'Мужской',
-      phone: '898211133344',
-      email: 'kirkorov@gmail.com',
-      position: 'Бухгалтер',
-      experience: 7,
-      workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
-      ],
-      studyExperience: [
-        {
-          id: 1,
-          studyYears: '1995-1999',
-          university: 'Уральский Федеральный университет',
-          specialisation: 'Бакалавриат по специальности маркетинг',
-        },
-      ],
-      skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://www.kino-teatr.ru/acter/photo/8/9/6398/1186314.jpg',
-      more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi quiaofficia impedit pariatur quae voluptatem vero eveniet eos quasi! Inventore itaquevero, possimus impedit officia ipsa nihil eveniet debitis! Maxime corrupti fugit, ipsum illo saepe architecto rem id, sed dolores nisi voluptas, aliasreprehenderit!',
-    },
-    {
-      id: 2,
-      name: 'Лепс Григорий Викторович',
-      age: 56,
-      gender: 'Мужской',
-      phone: '898211133344',
-      email: 'leps@gmail.com',
-      position: 'Экономист',
-      experience: 5,
-      workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2010-2012', workPosition: 'Старший менеджер', location: 'Газпром' },
-      ],
-      studyExperience: [
-        {
-          id: 1,
-          studyYears: '1995-1999',
-          university: 'Уральский Федеральный университет',
-          specialisation: 'Бакалавриат по специальности маркетинг',
-        },
-      ],
-      skills: ['Лидерские качества', 'MS Excel', 'MS Word'],
-      avatar:
-        'https://cdnn1.img.armeniasputnik.am/img/1347/85/13478534_497:0:2545:2048_1920x0_80_0_0_31f9fdd10484abc5998dd3c36a19b493.jpg',
-      more: '',
-    },
-    {
-      id: 3,
-      name: 'Овечкин Александр Михайлович',
-      age: 41,
-      gender: 'Мужской',
-      phone: '898211133344',
-      email: 'ovi@gmail.com',
-      position: 'Слесарь',
-      experience: 3,
-      workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
-      ],
-      studyExperience: [
-        {
-          id: 1,
-          studyYears: '1995-1999',
-          university: 'Уральский Федеральный университет',
-          specialisation: 'Бакалавриат по специальности маркетинг',
-        },
-      ],
-      skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
-      more: '',
-    },
-  ];
+  // let employees = [
+  //   {
+  //     id: 1,
+  //     name: 'Киркоров Филлип Бедросович',
+  //     age: 44,
+  //     gender: 'Мужской',
+  //     phone: '898211133344',
+  //     email: 'kirkorov@gmail.com',
+  //     position: 'Бухгалтер',
+  //     experience: 7,
+  //     workExp: [
+  //       { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
+  //       { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
+  //       { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+  //     ],
+  //     studyExperience: [
+  //       {
+  //         id: 1,
+  //         studyYears: '1995-1999',
+  //         university: 'Уральский Федеральный университет',
+  //         specialisation: 'Бакалавриат по специальности маркетинг',
+  //       },
+  //     ],
+  //     skills: ['Лидерские качества', 'Знание Excel'],
+  //     avatar: 'https://www.kino-teatr.ru/acter/photo/8/9/6398/1186314.jpg',
+  //     more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi quiaofficia impedit pariatur quae voluptatem vero eveniet eos quasi! Inventore itaquevero, possimus impedit officia ipsa nihil eveniet debitis! Maxime corrupti fugit, ipsum illo saepe architecto rem id, sed dolores nisi voluptas, aliasreprehenderit!',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Лепс Григорий Викторович',
+  //     age: 56,
+  //     gender: 'Мужской',
+  //     phone: '898211133344',
+  //     email: 'leps@gmail.com',
+  //     position: 'Экономист',
+  //     experience: 5,
+  //     workExp: [
+  //       { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
+  //       { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
+  //       { id: 3, workYears: '2010-2012', workPosition: 'Старший менеджер', location: 'Газпром' },
+  //     ],
+  //     studyExperience: [
+  //       {
+  //         id: 1,
+  //         studyYears: '1995-1999',
+  //         university: 'Уральский Федеральный университет',
+  //         specialisation: 'Бакалавриат по специальности маркетинг',
+  //       },
+  //     ],
+  //     skills: ['Лидерские качества', 'MS Excel', 'MS Word'],
+  //     avatar:
+  //       'https://cdnn1.img.armeniasputnik.am/img/1347/85/13478534_497:0:2545:2048_1920x0_80_0_0_31f9fdd10484abc5998dd3c36a19b493.jpg',
+  //     more: '',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Овечкин Александр Михайлович',
+  //     age: 41,
+  //     gender: 'Мужской',
+  //     phone: '898211133344',
+  //     email: 'ovi@gmail.com',
+  //     position: 'Слесарь',
+  //     experience: 3,
+  //     workExp: [
+  //       { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
+  //       { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
+  //       { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+  //     ],
+  //     studyExperience: [
+  //       {
+  //         id: 1,
+  //         studyYears: '1995-1999',
+  //         university: 'Уральский Федеральный университет',
+  //         specialisation: 'Бакалавриат по специальности маркетинг',
+  //       },
+  //     ],
+  //     skills: ['Лидерские качества', 'Знание Excel'],
+  //     avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+  //     more: '',
+  //   },
+  // ];
 
   const [modalActive, setModalActive] = useState(false);
 
   return (
-    // рендер сотрудника в списке
+    // рендер резюме сотрудника из списка
     props.search.map((user, index) => (
       <div key={user} className="employee">
         <EmployeeModal active={modalActive === index} setActive={setModalActive}>
@@ -162,33 +164,37 @@ export default function EmployeeInList(props) {
                   </div>
                 </div>
 
-                <div className="border__box">
-                  <div className="flex leading-10 text-[32px] text-[#2F89FE] font-semibold ">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="mr-4 w-54">
-                      <circle cx="20" cy="20" r="19" stroke="#2F89FE" stroke-width="2" />
-                      <path
-                        d="M19.9636 33L9.41818 27.2583V18.5917L4 15.6667L19.9636 7L36 15.6667V27.1139H33.8182V16.9306L30.5091 18.5917V27.2583L19.9636 33ZM19.9636 21.8778L31.4182 15.6667L19.9636 9.56389L8.58182 15.6667L19.9636 21.8778ZM19.9636 30.5444L28.3273 25.9583V19.8917L19.9636 24.3333L11.6 19.8194V25.9583L19.9636 30.5444Z"
-                        fill="#2F89FE"
-                      />
-                    </svg>
-                    <h4 className="">Образование</h4>
-                  </div>
-
-                  {user.studyExperience.map((c) => (
-                    <div key={c.id} className="education__wrapper">
-                      <div className="flex ml-10">
-                        <div className="bg-[#2F89FE] w-[11px] h-[11px] rounded-full mt-[8px] mr-[18px]"></div>
-                        <span className="year font-semibold text-lg text-[#2F89FE]">
-                          {c.studyYears}
-                        </span>
-                      </div>
-                      <div>
-                        <div className=" font-semibold text-lg text-[#2F89FE]">{c.university}</div>
-                        <div className=" font-medium text-m">{c.specialisation}</div>
-                      </div>
+                {user.studyExperience.length === 0 && (
+                  <div className="border__box">
+                    <div className="flex leading-10 text-[32px] text-[#2F89FE] font-semibold ">
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="mr-4 w-54">
+                        <circle cx="20" cy="20" r="19" stroke="#2F89FE" stroke-width="2" />
+                        <path
+                          d="M19.9636 33L9.41818 27.2583V18.5917L4 15.6667L19.9636 7L36 15.6667V27.1139H33.8182V16.9306L30.5091 18.5917V27.2583L19.9636 33ZM19.9636 21.8778L31.4182 15.6667L19.9636 9.56389L8.58182 15.6667L19.9636 21.8778ZM19.9636 30.5444L28.3273 25.9583V19.8917L19.9636 24.3333L11.6 19.8194V25.9583L19.9636 30.5444Z"
+                          fill="#2F89FE"
+                        />
+                      </svg>
+                      <h4 className="">Образование</h4>
                     </div>
-                  ))}
-                </div>
+
+                    {user.studyExperience.map((c) => (
+                      <div key={c.id} className="education__wrapper">
+                        <div className="flex ml-10">
+                          <div className="bg-[#2F89FE] w-[11px] h-[11px] rounded-full mt-[8px] mr-[18px]"></div>
+                          <span className="year font-semibold text-lg text-[#2F89FE]">
+                            {c.studyYears}
+                          </span>
+                        </div>
+                        <div>
+                          <div className=" font-semibold text-lg text-[#2F89FE]">
+                            {c.university}
+                          </div>
+                          <div className=" font-medium text-m">{c.specialisation}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <div className="border__box">
                   <div className="flex leading-10 text-[32px] text-[#2F89FE] font-semibold ">
@@ -227,6 +233,7 @@ export default function EmployeeInList(props) {
                     </svg>
                     <h4 className="">Уровень владения</h4>
                   </div>
+                  <SkillBar3 />
                 </div>
 
                 <div className="border__box">
