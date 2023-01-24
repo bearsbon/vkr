@@ -1,5 +1,4 @@
 const User = require('./src/models/User');
-const Exp = require('./src/models/User');
 
 exports.updateUser = async (req, res) => {
   const { email } = req.body;
@@ -40,27 +39,18 @@ exports.deleteUser = async (req, res) => {
   }
 };
 
-exports.getAllExp = async (req, res) => {
-  try {
-    const exp = await Exp.find().populate('user').exec();
-    req.json(exp);
-  } catch (error) {
-    res.status(404).json({ message: `Опыт работы не найден` });
-  }
-};
+// exports.editField = async (req, res) => {
+//   try {
+//     const id = req.params.id;
+//     const field = req.query.field;
+//     const value = req.query.value;
 
-exports.editField = async (req, res) => {
-  try {
-    const id = req.params.id;
-    const field = req.query.field;
-    const value = req.query.value;
+//     const user = await User.updateOne({ _id: id, [field]: value });
 
-    const user = await User.updateOne({ _id: id, [field]: value });
-
-    if (user) {
-      res.json({ message: 'Обновлено успешно!' });
-    }
-  } catch (error) {
-    res.status(404).json({ message: `Поле не найдено` });
-  }
-};
+//     if (user) {
+//       res.json({ message: 'Обновлено успешно!' });
+//     }
+//   } catch (error) {
+//     res.status(404).json({ message: `Поле не найдено` });
+//   }
+// };

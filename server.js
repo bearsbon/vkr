@@ -57,5 +57,5 @@ app.get('/resume/:id', userController.find);
 app.delete('/resume/:id', userController.deleteUser);
 
 // Получение коллекции опыта
-app.get('/resume/getAllExp', userController.getAllExp);
-app.put('/resume/edit', userController.editField);
+// app.get('/resume/getAllExp', userController.getAllExp);
+// app.put('/resume/edit', userController.editField);
