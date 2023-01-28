@@ -71,6 +71,9 @@ const User = new Schema({
   more: {
     type: String,
   },
+  avatarUrl: {
+    type: String,
+  },
 });
 
 module.exports = model('User', User);

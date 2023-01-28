@@ -1,4 +1,4 @@
-const User = require('./src/models/User');
+const User = require('../models/User');
 
 exports.updateUser = async (req, res) => {
   const { email } = req.body;
@@ -38,19 +38,3 @@ exports.deleteUser = async (req, res) => {
     res.status(404).json({ message: `Пользователь с id ${req.params.id} не найден` });
   }
 };
-
-// exports.editField = async (req, res) => {
-//   try {
-//     const id = req.params.id;
-//     const field = req.query.field;
-//     const value = req.query.value;
-
-//     const user = await User.updateOne({ _id: id, [field]: value });
-
-//     if (user) {
-//       res.json({ message: 'Обновлено успешно!' });
-//     }
-//   } catch (error) {
-//     res.status(404).json({ message: `Поле не найдено` });
-//   }
-// };

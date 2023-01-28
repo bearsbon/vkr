@@ -1,7 +1,7 @@
-const User = require('./src/models/User');
+const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { secret } = require('./config');
+const { secret } = require('../../config');
 
 const { validationResult } = require('express-validator');
 const { getMouseEventOptions } = require('@testing-library/user-event/dist/utils');
