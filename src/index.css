@@ -77,8 +77,12 @@ input {
 }
 
 .employee {
-  @apply lg:w-[85%] xl:w-[95%] 2xl:w-[100%] h-16 bg-[#FAFAFA] rounded-[50px] border-[1px] grid items-center my-2 xl:grid-cols-[80px_1fr_1fr_250px_1fr];
+  @apply lg:w-[85%] xl:w-[95%] 2xl:w-[100%] h-16 bg-[#FAFAFA] rounded-lg grid items-center xl:grid-cols-[80px_1fr_1fr_250px_1fr];
   /* grid-template-columns: 80px 1fr 1fr 250px 1fr; */
+}
+
+.employee:hover {
+  background: #f0f0f0;
 }
 
 .name {

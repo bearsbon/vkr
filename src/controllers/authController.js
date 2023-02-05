@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const { secret } = require('../../config');
 
 const { validationResult } = require('express-validator');
-const { getMouseEventOptions } = require('@testing-library/user-event/dist/utils');
 
 const generateAccessToken = (id) => {
   const payload = {
@@ -18,20 +17,25 @@ class authController {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ message: 'Ошибка при регистрации', errors });
+        return res
+          .status(400)
+          .json({ message: 'Ошибка при регистрации', errors });
       }
       const email = await req.body.email;
       const password = await req.body.password;
       const candidate = await User.findOne({ email });
 
       if (candidate) {
-        return res.status(400).json({ message: 'Пользователь с таким именем уже существует' });
+        return res
+          .status(400)
+          .json({ message: 'Пользователь с таким именем уже существует' });
       }
       const salt = await bcrypt.genSaltSync(7);
       const passwordHash = bcrypt.hashSync(password, salt);
       const newUser = new User({
         email: req.body.email,
         password: passwordHash,
+        fullName: req.body.fullName,
       });
       await newUser.save();
       return res.json({ message: 'Пользователь успешно зарегестрирован' });
@@ -47,7 +51,9 @@ class authController {
       const password = await req.body.password;
       const user = await User.findOne({ email });
       if (!user) {
-        return res.status(400).json({ message: `Пользователь ${email} не найден` });
+        return res
+          .status(400)
+          .json({ message: `Пользователь ${email} не найден` });
       }
       const validPassword = bcrypt.compareSync(password, user.password);
       if (!validPassword) {
@@ -76,7 +82,7 @@ class authController {
 
       if (!user) {
         return res.status(403).json({
-          message: 'Пользователь не авторизован 123',
+          message: 'Пользователь не авторизован',
         });
       }
       res.status(200).json({ user });

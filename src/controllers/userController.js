@@ -1,7 +1,6 @@
 const User = require('../models/User');
 
 exports.updateUser = async (req, res) => {
-  const { email } = req.body;
   const id = req.params.id;
 
   if (Object.keys(req.body).length === 0) {

@@ -19,9 +19,24 @@ export default function Employees() {
       position: 'Бухгалтер',
       experience: 7,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -45,9 +60,24 @@ export default function Employees() {
       position: 'Экономист',
       experience: 5,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2010-2012', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2010-2012',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -72,9 +102,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -85,7 +130,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -98,9 +144,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -111,7 +172,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -124,9 +186,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -137,7 +214,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -150,9 +228,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -163,7 +256,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -176,9 +270,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -189,7 +298,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -202,9 +312,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -215,7 +340,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -228,9 +354,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -241,7 +382,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
     {
@@ -254,9 +396,24 @@ export default function Employees() {
       position: 'Слесарь',
       experience: 3,
       workExp: [
-        { id: 1, workYears: '2004-2007', workPosition: 'Бухгалтер', location: 'Лукойл' },
-        { id: 2, workYears: '2007-2010', workPosition: 'Младший менеджер', location: 'Газпром' },
-        { id: 3, workYears: '2007-2010', workPosition: 'Старший менеджер', location: 'Газпром' },
+        {
+          id: 1,
+          workYears: '2004-2007',
+          workPosition: 'Бухгалтер',
+          location: 'Лукойл',
+        },
+        {
+          id: 2,
+          workYears: '2007-2010',
+          workPosition: 'Младший менеджер',
+          location: 'Газпром',
+        },
+        {
+          id: 3,
+          workYears: '2007-2010',
+          workPosition: 'Старший менеджер',
+          location: 'Газпром',
+        },
       ],
       studyExperience: [
         {
@@ -267,7 +424,8 @@ export default function Employees() {
         },
       ],
       skills: ['Лидерские качества', 'Знание Excel'],
-      avatar: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
+      avatar:
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Alex_Ovechkin_2017-05-06.jpg',
       more: '',
     },
   ];
@@ -290,7 +448,10 @@ export default function Employees() {
             Найдено: ({})
           </h3>
           <div className="filter_name">Компетенции</div>
-          <input className="filter_search h-[35px] w-full border-[1px] rounded-lg" type="text" />
+          <input
+            className="filter_search h-[35px] w-full border-[1px] rounded-lg"
+            type="text"
+          />
           <div className="filter_name">Образование</div>
 
           <div className="filter_name">Должность</div>
