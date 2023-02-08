@@ -139,7 +139,7 @@ input {
   @apply h-screen w-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 flex items-center justify-center;
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: 0.3s linear;
 }
 
 .modal.active {
@@ -152,7 +152,7 @@ input {
   margin-top: 10px;
   width: 80vw;
   /* transform: scale(0.5); */
-  transition: 0.3s;
+  /* transition: 0.3s linear; */
 }
 
 @keyframes scroll {

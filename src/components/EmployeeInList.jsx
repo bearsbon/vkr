@@ -262,11 +262,11 @@ export default function EmployeeInList(props) {
         </div>
 
         <button
-          className="bg-sky-700 text-white pl-4 pr-2 py-[0.4rem] rounded-[20px] ml-auto mr-5 active:translate-y-[1px] text-[12px] col-start-5"
+          className="bg-sky-700 text-white pl-4 pr-2 py-[0.4rem] rounded-md ml-auto mr-5 active:translate-y-[1px] text-[12px] col-start-5"
           onClick={() => setModalActive(index)}>
           Подробнее
           <svg
-            className="inline-block mx-1"
+            className="inline-block mx-2"
             width="9"
             height="13"
             viewBox="0 0 9 13"
