@@ -20,6 +20,11 @@ input {
   @apply focus:outline-none;
 }
 
+hr {
+  border-top: 2px solid #b9bcc1;
+  margin-top: 25px;
+}
+
 .content {
   @apply grid bg-white rounded-[10px] p-10 shadow-2xl h-[90vh] lg:grid-cols-[210px_auto] xl:grid-cols-[300px_auto];
 }
@@ -73,7 +78,7 @@ input {
 }
 
 .filter_name {
-  @apply my-5 text-lg font-medium text-[#303439];
+  @apply my-3 text-lg font-medium text-[#303439];
 }
 
 .employee {
