@@ -25,12 +25,28 @@ hr {
   margin-top: 25px;
 }
 
+.resume__icon {
+  @apply p-1 border-2 border-sky-700 rounded-full mr-2 text-[25px] text-sky-700;
+}
+
+.skill__item {
+  @apply rounded-2xl px-3 leading-7 h-7 relative;
+}
+
+.skill__delete {
+  @apply relative ml-1 text-[18px] cursor-pointer inline-block top-[3px];
+}
+
 .content {
   @apply grid bg-white rounded-[10px] p-10 shadow-2xl h-[90vh] lg:grid-cols-[210px_auto] xl:grid-cols-[300px_auto];
 }
 
+.resume__content {
+  @apply grid bg-white rounded-[10px] p-10 shadow-2xl h-[90vh] xl:grid-cols-[300px_auto];
+}
+
 .sidebar-link {
-  @apply transition duration-200 flex items-center gap-4 tracking-[1px] p-4 pl-10 font-medium text-base text-gray-100 bg-sky-800 active:bg-gray-100 hover:text-sky-800 hover:bg-gray-200;
+  @apply transition duration-200 flex items-center gap-4 tracking-[1px] p-4 pl-10 font-normal text-base text-gray-100 bg-sky-700 active:bg-gray-100 hover:text-sky-700 hover:bg-gray-200;
 }
 
 .sidebar-link:hover svg {
@@ -44,6 +60,10 @@ hr {
 
 .active svg {
   fill: rgb(7 89 133);
+}
+
+.circle {
+  @apply bg-sky-700 w-[7px] h-[7px] rounded-full relative top-[7px] mr-2;
 }
 
 .resume {
@@ -95,13 +115,13 @@ hr {
 }
 
 .employee_search {
-  @apply rounded-[10px] w-[75%] h-[38px] px-3 ml-3 mb-5;
-  box-shadow: 0 0 5px 1px #9499a0 inset;
+  @apply rounded-[3px] w-[75%] h-[38px] px-3 ml-3 mb-5;
+  box-shadow: 0 0 2px 1px #9499a0 inset;
 }
 
 .filter_search {
   padding: 10px;
-  box-shadow: 0 0 3px 1px #9499a0 inset;
+  box-shadow: 0 0 2px 1px #9499a0 inset;
 }
 
 .mainBG {
@@ -123,12 +143,39 @@ hr {
 }
 
 .stat_item {
-  @apply bg-white w-[300px] h-[180px] my-5 rounded-xl p-7 relative after:bg-sky-700 after:absolute after:w-4 after:h-[50%] after:rounded-tl-xl after:rounded-bl-xl  after:right-0;
+  @apply bg-white w-[300px] h-[180px] my-5 rounded-xl p-7 relative shadow-xl after:bg-sky-600 after:absolute after:w-4 after:h-[45%] after:rounded-tl-xl after:rounded-bl-xl  after:right-0;
   box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.25);
 }
 
 .stat_item::after {
   box-shadow: inset 0 5px 5px 3px rgba(0, 0, 0, 0.25);
+}
+
+.stat__chart::after {
+  @apply absolute rounded-b-xl top-0 h-6 bg-sky-600;
+  box-shadow: inset 5px 0 5px 3px rgba(0, 0, 0, 0.25);
+  content: '';
+  width: 70%;
+  left: 15%;
+}
+
+.progress__chart {
+  @apply relative m-4 text-center;
+}
+
+.barOverflow {
+  @apply relative overflow-hidden w-52 h-24 -mb-7;
+}
+
+.bar {
+  @apply relative top-0 left-0 w-52 h-52 rounded-full box-border;
+  border: 25px solid #cecece; /* half gray, */
+  border-bottom-color: #0369a1; /* half azure */
+  border-right-color: #0369a1;
+}
+
+.percentage {
+  @apply font-medium text-2xl -mt-9;
 }
 
 /* dropdown  */
@@ -266,8 +313,6 @@ hr {
   transform: translateX(-50%) rotate(45deg);
 }
 
-/* Skillbar end */
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -282,4 +327,15 @@ hr {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
+}
+
+.employee button {
+  border: 1px solid #036aa15c;
+  transition: 0.3s;
+}
+
+.employee button:hover {
+  background-color: #0369a1;
+  box-shadow: 0 0 0 4px #3b83f65f;
+  color: #fff;
 }

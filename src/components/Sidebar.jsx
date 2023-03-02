@@ -17,8 +17,8 @@ const Sidebar = (props) => {
   };
 
   return (
-    <aside className="bg-sky-800" aria-label="Sidebar">
-      <div class="w-64 h-screen bg-sky-800">
+    <aside className="bg-sky-700" aria-label="Sidebar">
+      <div class="w-64 h-screen bg-sky-700">
         <img src={logo} class="ml-5" />
         <ul class=" bg-sky-800">
           <li>

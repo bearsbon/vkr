@@ -2,6 +2,7 @@ import EmployeeModal from './EmployeeModal';
 import { useState } from 'react';
 import SkillBar from './employeeInfo/skillbar/SkillsBar';
 import SkillBar3 from './employeeInfo/skillbar/SkillBar3';
+import { FiChevronRight } from 'react-icons/fi';
 
 export default function EmployeeInList(props) {
   const [modalActive, setModalActive] = useState(false);
@@ -112,7 +113,7 @@ export default function EmployeeInList(props) {
                   </div>
                 </div>
 
-                {user.studyExperience.length === 0 && (
+                {user.studyExperience.length !== 0 && (
                   <div className="border__box">
                     <div className="flex leading-10 text-[32px] text-[#2F89FE] font-semibold ">
                       <svg
@@ -214,7 +215,7 @@ export default function EmployeeInList(props) {
                     </svg>
                     <h4 className="">Уровень владения</h4>
                   </div>
-                  <SkillBar3 />
+                  {/* <SkillBar3 /> */}
                 </div>
 
                 <div className="border__box">
@@ -262,20 +263,9 @@ export default function EmployeeInList(props) {
         </div>
 
         <button
-          className="bg-sky-700 text-white pl-4 pr-2 py-[0.4rem] rounded-md ml-auto mr-5 active:translate-y-[1px] text-[12px] col-start-5"
+          className="bg-[#FAFAFA] text-[#0369a1] font-medium px-4 py-[0.4rem] rounded-md ml-auto mr-5 text-[12px] col-start-5"
           onClick={() => setModalActive(index)}>
           Подробнее
-          <svg
-            className="inline-block mx-2"
-            width="9"
-            height="13"
-            viewBox="0 0 9 13"
-            fill="none">
-            <path
-              d="M2.23594 9.69209C2.23594 9.94106 2.43777 10.1429 2.68675 10.1429H6.31325C6.56223 10.1429 6.76406 9.94106 6.76406 9.69209V9.69209C6.76406 9.44311 6.56223 9.24127 6.31325 9.24127H2.68675C2.43777 9.24127 2.23594 9.44311 2.23594 9.69209V9.69209ZM2.23594 7.13747C2.23594 7.38644 2.43777 7.58828 2.68675 7.58828H6.31325C6.56223 7.58828 6.76406 7.38644 6.76406 7.13747V7.13747C6.76406 6.88849 6.56223 6.68665 6.31325 6.68665H2.68675C2.43777 6.68665 2.23594 6.88849 2.23594 7.13747V7.13747ZM0.84375 12.6975C0.61875 12.6975 0.421875 12.6074 0.253125 12.427C0.0843749 12.2467 0 12.0363 0 11.7959V1.57741C0 1.33698 0.0843749 1.1266 0.253125 0.94627C0.421875 0.765944 0.61875 0.675781 0.84375 0.675781H3.56108C5.06616 0.675781 6.50394 1.29945 7.53233 2.39838V2.39838C8.47534 3.40608 9 4.73459 9 6.1147V11.7959C9 12.0363 8.91562 12.2467 8.74687 12.427C8.57812 12.6074 8.38125 12.6975 8.15625 12.6975H0.84375ZM6.82734 4.37247C6.09341 4.37247 5.49844 3.77749 5.49844 3.04356V2.97494C5.49844 2.20311 4.87274 1.57741 4.10091 1.57741H3.17109C1.88574 1.57741 0.84375 2.6194 0.84375 3.90476V8.13964C0.84375 10.1589 2.48071 11.7959 4.5 11.7959V11.7959C6.51929 11.7959 8.15625 10.1589 8.15625 8.13964V5.70137C8.15625 4.96744 7.56128 4.37247 6.82734 4.37247V4.37247ZM0.84375 1.57741V4.37247V1.57741V11.7959V1.57741Z"
-              fill="white"
-            />
-          </svg>
         </button>
       </div>
     ))

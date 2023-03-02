@@ -3,6 +3,7 @@ import './index.css';
 import StartPage from './pages/StartPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Apply from './pages/Apply';
 import ContentRoutes from './components/ContentRoutes';
 
 import { Routes, Route } from 'react-router-dom';
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/" element={<StartPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/apply" element={<Apply />} />
         </Routes>
       )}
     </div>

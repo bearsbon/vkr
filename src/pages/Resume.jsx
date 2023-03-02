@@ -1,5 +1,6 @@
 import React from 'react';
 import ava from './../images/mark-cukerberg.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Resume() {
   const workExp = [
@@ -57,9 +58,11 @@ export default function Resume() {
   return (
     <div className="text-[#303439] ">
       <h1 className="text-[22px] font-semibold text-[#303439] ">Мое резюме</h1>
-      <button className="bg-sky-700 text-white px-5 py-2 rounded-lg active:scale-[.98] block ml-auto">
+      <Link
+        to="/resume/edit"
+        className="w-[200px] bg-sky-700 text-center text-white px-5 py-2 rounded-lg active:scale-[.98] block ml-auto">
         Редактировать
-      </button>
+      </Link>
       <div className="content overflow-scroll overflow-x-hidden mt-4">
         <div className="left mx-auto">
           <img src={ava} alt="ava" class="mx-auto w-[250px] rounded-full" />
